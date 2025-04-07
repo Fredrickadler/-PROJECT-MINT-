@@ -12,10 +12,10 @@ export const metadata: Metadata = {
         {
           label: 'Mint Now',
           action: 'post',
-          target: 'https://cosmic-fragment-mini.your-username.replit.app/api/mint'
+          target: '/api/mint'
         }
       ],
-      post_url: 'https://cosmic-fragment-mini.your-username.replit.app/api/mint'
+      post_url: '/api/mint'
     })
   }
 };
