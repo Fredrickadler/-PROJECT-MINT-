@@ -4,13 +4,14 @@ import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    const { MiniAppSDK } = window.FarcasterMiniApps || {};
-    const sdk = new MiniAppSDK();
     const initializeApp = async () => {
       try {
-        if (sdk && sdk.actions && sdk.actions.ready) {
-          await sdk.actions.ready();
-          console.log("SDK ready called!");
+        if (window.FarcasterMiniApps && window.FarcasterMiniApps.MiniAppSDK) {
+          const sdk = new window.FarcasterMiniApps.MiniAppSDK();
+          if (sdk.actions && sdk.actions.ready) {
+            await sdk.actions.ready();
+            console.log("SDK ready called!");
+          }
         }
       } catch (error) {
         console.error("Error:", error);
