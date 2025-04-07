@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    const { MiniAppSDK } = (window as any).FarcasterMiniApps || {};
+    const { MiniAppSDK } = window.FarcasterMiniApps || {};
+    const sdk = new MiniAppSDK();
     const initializeApp = async () => {
       try {
         if (sdk && sdk.actions && sdk.actions.ready) {
