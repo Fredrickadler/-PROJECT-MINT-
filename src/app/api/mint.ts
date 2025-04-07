@@ -10,10 +10,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           {
             "label": "Confirm Mint",
             "action": "post",
-            "target": "https://cosmic-fragment-mini.your-username.replit.app/"
+            "target": "/"
           }
         ],
-        "post_url": "https://cosmic-fragment-mini.your-username.replit.app/"
+        "post_url": "/"
       },
       "message": "Mint request processed!"
     });
